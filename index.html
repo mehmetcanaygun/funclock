@@ -4,11 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Fun Clock</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Monoton"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="container text-center pt-4">
+      <h1 class="display-1">Puppy Clock</h1>
+      <i id="rotating-puppy-icon" class="fas fa-dog fa-3x m-4"></i>
+      <i id="rotating-puppy-icon" class="fas fa-dog fa-3x m-4"></i>
+      <i id="rotating-puppy-icon" class="fas fa-dog fa-3x m-4"></i>
+      <div id="time-wrapper" class="text-center m-4 display-2">
+        14:21:38
+      </div>
+      <canvas id="my-canvas" width="600" height="400" class="m-4"></canvas>
+      <div class="input-group mb-3">
+        <select
+          class="custom-select font-weight-bold text-white bg-dark"
+          id="inputGroupSelect01"
+        >
+          <option selected>Set Wake Up Time</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <select
+          class="custom-select font-weight-bold text-white bg-dark"
+          id="inputGroupSelect01"
+        >
+          <option selected>Set Lunch Time</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <select
+          class="custom-select font-weight-bold text-white bg-dark"
+          id="inputGroupSelect01"
+        >
+          <option selected>Set Nap Time</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
