@@ -27,23 +27,22 @@
   </head>
   <body>
     <div class="container text-center pt-4">
-      <h1 class="display-1">Puppy Clock</h1>
+      <h1 class="display-3">Puppy Clock</h1>
       <i id="rotating-puppy-icon" class="fas fa-dog fa-3x m-4"></i>
       <i id="rotating-puppy-icon" class="fas fa-dog fa-3x m-4"></i>
       <i id="rotating-puppy-icon" class="fas fa-dog fa-3x m-4"></i>
-      <div id="time-wrapper" class="text-center m-4 display-2"></div>
-      <canvas id="my-canvas" width="600" height="400" class="m-4"></canvas>
-      <div class="input-group mb-3 w-50">
+      <div id="time-wrapper" class="text-center m-4 display-4"></div>
+      <canvas id="my-canvas" width="450" height="360" class="m-4"></canvas>
+      <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label
-            class="input-group-text font-weight-bold"
-            for="inputGroupSelect01"
+          <label class="input-group-text font-weight-bold" for="wake-up-time"
             >Set Wake Up Time</label
           >
         </div>
         <select
           class="custom-select font-weight-bold text-dark bg-light"
-          id="inputGroupSelect01"
+          id="wake-up-time"
+          onchange="notifyChange();"
         >
           <option value="1">01:00 - 02:00</option>
           <option value="1">02:00 - 03:00</option>
@@ -71,17 +70,16 @@
           <option value="1">00:00 - 01:00</option>
         </select>
       </div>
-      <div class="input-group mb-3 w-50">
+      <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label
-            class="input-group-text font-weight-bold"
-            for="inputGroupSelect01"
+          <label class="input-group-text font-weight-bold" for="lunch-time"
             >Set Lunch Time</label
           >
         </div>
         <select
           class="custom-select font-weight-bold text-dark bg-light"
-          id="inputGroupSelect01"
+          id="lunch-time"
+          onchange="notifyChange();"
         >
           <option value="1">01:00 - 02:00</option>
           <option value="1">02:00 - 03:00</option>
@@ -109,17 +107,16 @@
           <option value="1">00:00 - 01:00</option>
         </select>
       </div>
-      <div class="input-group mb-3 w-50">
+      <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label
-            class="input-group-text font-weight-bold"
-            for="inputGroupSelect01"
+          <label class="input-group-text font-weight-bold" for="nap-time"
             >Set Nap Time</label
           >
         </div>
         <select
           class="custom-select font-weight-bold text-dark bg-light"
-          id="inputGroupSelect01"
+          id="nap-time"
+          onchange="notifyChange();"
         >
           <option value="1">01:00 - 02:00</option>
           <option value="1">02:00 - 03:00</option>
@@ -147,7 +144,11 @@
           <option value="1">00:00 - 01:00</option>
         </select>
       </div>
-      <button type="button" class="btn btn-light font-weight-bold">
+      <button
+        id="party-btn"
+        type="button"
+        class="btn btn-dark font-weight-bold p-3"
+      >
         Party!
       </button>
       <hr />
